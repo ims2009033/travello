@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> users </title>
+
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+<div>
+    <h1><a href="/">Home</a></h1>
+</div>
+
+<table id="t01" >
+    <h2> Assets in DB ...</h2>
+    <tr><th>Center </th><th>Building</th><th>Floor#</th><th>Dept. Name</th><th>Location</th><th>Asset Belongs</th><th>Enduser</th><th>CC Number</th> </tr>
+    {% for asset in assets %}
+        
+    <tr><td>{{ asset.center }}</td><td>{{ asset.building }}</td><td>{{ asset.floor }}</td><td>{{ asset.dept }}</td> <td>{{ asset.location }}</td><td>{{ asset.belongs }}</td><td>{{ asset.enduser  }}</td><td>{{ asset.CC_number }}</td></tr>
+        
+    {% endfor %}
+
+   
+</table>
+
+</body>
+   
+
+</html>

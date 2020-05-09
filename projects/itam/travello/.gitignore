@@ -1,0 +1,8 @@
+*.pyc
+*~
+/.vscode
+__pycache__
+test
+db.postgresql
+/static
+.DS_Store
